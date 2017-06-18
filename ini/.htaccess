@@ -1,0 +1,6 @@
+<Files ~ "\.xml$">
+deny from all
+allow from 127.0.0.1
+</Files>
+
+Options -Indexes

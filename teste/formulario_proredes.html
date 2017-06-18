@@ -1,0 +1,45 @@
+﻿<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<link href="estilo.css" rel="stylesheet" type="text/css" />
+
+<script>
+$(document).ready(function(){
+    
+	$("button").click(function(){
+    alert("Entrou");
+	$.post("teste_post.php",
+    {
+        name: "Donald Duck",
+        city: "Duckburg"
+    },
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });//fim da função alert
+});//fim da função clique
+});//fim da função ready
+</script>
+
+
+
+<body>
+
+<div class="envelope">
+
+<div class="esquerda">
+<div class="linha" ><p>Usuario coletivo do nome</p></div>
+<div class="linha"><p>Nome do usuario</p></div>
+<div class="linha"><p>Senha do usuario</p></div>
+</div>
+
+<div class="direita">
+<div class="linha" ><input type = "text" id="nome"></div>
+<div class="linha"><input type = "text" name = "usuario"></div>
+<div class="linha"><input type = "text" name = "usuario"></div>
+</div>
+
+<div class="clear"></div>
+
+<div> <button>Enviar</button></div>
+</div>
+</body>

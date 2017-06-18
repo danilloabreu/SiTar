@@ -1,0 +1,210 @@
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #d2d2e3;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Seletores de elementos/tag ~~ */
+/*ul, ol, dl { /* Devido a variações entre navegadores, é recomendado zerar o padding e a margem nas listas. É possível especificar as quantidades aqui ou nos itens da lista (LI, DT, DD) que eles contêm. Lembre-se: o que você fizer aqui ficará em cascata para a lista de navegação a não ser que você escreva outro seletor mais específico. 
+	padding: 0;
+	margin: 0;
+}*/
+/*h1, h2, h3, h4, h5, h6, p {
+    font-family: Arial,sans-serif;	
+    margin-top: 0;	 /* ao remover a margem superior, as margens podem escapar das suas containing div. A margem inferior restante vai mantê-la afastada de qualquer elemento que se segue. */
+    padding-right: 15px;
+    padding-left: 15px; /* adicionando o padding para os lados dos elementos dentro dos divs, ao invés dos próprios divs o livra de qualquer combinação de modelo de caixa. Um div aninhado com padding lateral também pode ser usado como método alternativo. */
+/*}/*
+
+a img { /* esse seletor remove a borda azul padrão exibida em alguns navegadores ao redor de uma imagem circundada por um link. */
+/*	border: none;
+}*/
+
+/* ~~ A estilização dos links do seu site deve permanecer nesta ordem – incluindo o grupo de seletores que criam o efeito hover. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* a não ser que você estilize seus links para que pareçam extremamente únicos, é melhor utilizar links sublinhados para uma identificação visual mais rápida. */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que estiver usando um teclado a mesma experiência de hover do que uma pessoa usando um mouse. */
+	text-decoration: none;
+}
+
+/* ~ esse contêiner envolve todos os outros divs dando a eles uma largura com base em porcentagem ~~ */
+.container {
+	width: 90%;
+	max-width: 1260px;/* uma largura máxima pode ser desejável para evitar que esse layout fique muito largo num monitor grande. Isso torna o comprimento da linha mais legível. O IE6 não concorda com essa declaração. */
+	min-width: 780px;/* uma largura mínima pode ser desejável para evitar que esse layout fique muito estreito. Isso torna o comprimento da linha mais legível nas colunas laterais. O IE6 não concorda com essa declaração. */
+	background: #FFF;
+	margin: 0 auto; /* o valor automático nos lados, combinado com a largura, centraliza o layout. Não é necessário definir a largura do contêiner para 100%. */
+}
+
+/* ~~o cabeçalho não tem uma largura. Ele pode ocupar toda a largura do layout. Possui um alocador de espaço de imagem que deve ser substituído pelo seu logotipo com link~~ */
+.header {
+	background: #6F7D94;
+}
+
+/* ~~ Informações sobre o layout. ~~ 
+
+1) O padding é posto somente na parte superior e inferior do div. Os elementos nesse div têm padding nos seus lados impedindo o modelo tipo caixa. Lembre-se: ao adicionar qualquer padding lateral ou  bordas no próprio div, ele será adicionado à largura que você define para criar a largura *total*. Também é necessário remover o padding no elemento do div e estabelecer um segundo div, sem largura e o padding necessário para o seu design.
+
+*/
+.content {
+	padding: 10px 0;
+    text-align: center;
+}
+
+/* ~~ Este seletor agrupado fornece as listas dentro do espaço da área de conteúdo ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* esse padding espelha o padding direito nos cabeçalhos e regra de parágrafo acima. O padding foi colocado na parte inferior para obter espaço entre outros elementos das listas e à esquerda para criar o recuo. Estes podem ser ajustados como desejar. */
+}
+
+/* ~~ O rodapé ~~ */
+.footer {
+	padding: 0px 0;
+	background: #6F7D94;
+    text-align:center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+/* ~~ flutuações diversas/limpeza de classes ~~ */
+.fltrt {  /* essa classe pode ser usada para flutuar um elemento à direita da página. O elemento flutuado deve preceder o elemento e ser o próximo da página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* essa classe pode ser usada para flutuar um elemento à esquerda da página. O elemento flutuado deve preceder o elemento e deve ser o próximo da página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* essa classe pode ser colocada em um <br /> ou em um div vazio como o elemento final que segue o último div flutuado (no #contêiner) caso o rodapé seja removido ou retirado do contêiner. */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+
+.menu{
+list-style:none; 
+border:1px solid #c0c0c0; 
+float:left; 
+}
+
+.menu li{
+position:relative; 
+float:left; 
+border-right:1px solid #c0c0c0; 
+}
+
+.menu li a{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+
+.menu li a:hover{
+background:#333; 
+color:#fff; 
+-moz-box-shadow:0 3px 10px 0 #CCC; 
+-webkit-box-shadow:0 3px 10px 0 #ccc; 
+text-shadow:0px 0px 5px #fff; 
+}
+
+.menu li  ul{
+position:absolute; 
+top:25px; 
+left:0;
+background-color:#fff; 
+display:none;
+}
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+.menu li ul li{
+border:1px solid #c0c0c0; 
+display:block; 
+width:150px;
+}
+tr{
+ text-align: center;   
+}
+
+tr:hover{
+    background-color: #EDDB11;
+}
+
+.atrasada {
+background-color: #e24941;
+        
+}
+
+.content h1{
+    color:blue;
+}
+
+#tabela_movimento_pendente:hover {
+    
+    background-color: #EEEEEE;
+    
+}
+
+.tabela_movimento_pendente{
+ width: 95%;   
+ font-family: Arial,sans-serif;
+ margin-left: 2.5%;
+}
+
+.tabela_monitoramento_tarefa{
+ width: 95%;   
+ font-family: Arial,sans-serif;
+ margin-left: 2.5%;
+}
+
+.tabela_rastreamento_tarefa{
+ width: 95%;   
+ font-family: Arial,sans-serif;
+ margin-left: 2.5%;
+}
+td .tabela_monitoramento_tarefa{
+max-width: 6%;    
+}
+
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+.myBar {
+  position: absolute;
+  /*width: 50.878785%;*/
+  height: 100%;
+  /*background-color: #4CAF50;*/
+}
+
+.icons{
+    text-align: center;
+    font-size: 3em;
+}
+
+.icons .add{
+    color: blue;
+    cursor: pointer;
+    
+    
+}
+
+.icons .search{
+    color:red;
+    cursor:pointer;
+}
+
+.icons .tarefa{
+    color:green;
+    cursor:pointer;
+}

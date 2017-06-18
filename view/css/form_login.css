@@ -1,0 +1,103 @@
+body{
+background: #000000	;
+background-image: url("../img/fundo0.png");
+}
+
+.titulo{
+font-family: Arial,sans-serif;
+font-size:22px;
+line-height:24px;
+font-weight: normal;
+text-align:center;
+color:#333333
+}
+
+.subtitulo{
+font-family: Arial,sans-serif;
+font-size:16px;
+line-height:18px;
+font-weight: normal;
+text-align:center;
+color:#333333
+}
+
+label{
+font-family: Arial,sans-serif;
+color: #66696A;
+margin-left:5%;
+
+}
+
+.entrada{
+font-family: Arial,sans-serif;
+font-size:16px;
+line-height:18px;
+color:black;
+margin-left:5%;
+margin-bottom:10px;
+background: #FDFDFD;
+border : 1px solid #BFBFBF;
+height:32px;
+width:90%;
+vertical-align:middle;
+border-radius: 4px;
+}
+
+
+.div{
+background:#EEEEEE;
+max-height: 50%;
+margin-left:33%;
+width:33%;
+padding-bottom:1%;
+border-radius: 10px;
+    
+
+
+}
+
+.entrar{
+font-family: Arial,sans-serif;
+font-size:16px;
+line-height:18px;
+margin-left:5%;
+background: #EDDB11;
+	width:90%;
+vertical-align:middle;
+text-align:center;
+height:32px;
+padding-top:5px;
+padding-bottom:5px;
+
+display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+	cursor:pointer;
+	border-radius:4px;
+	
+border: 1px solid  #E9AC1A;
+font-weight: bold;
+text-shadow: rgba(255,255,255,0.74902)0 1px 1px
+}
+
+
+
+
+
+
+
+#container{
+background:#333333;
+
+display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+background-image: url("../img/fundo1.png");
+width:100%;
+
+
+}
+
+

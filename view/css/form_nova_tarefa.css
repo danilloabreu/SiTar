@@ -1,0 +1,96 @@
+.esquerda{
+    
+    float: left;
+    margin: 0 0 10px 10px;
+    text-align:right;
+    max-width:49%;
+    box-sizing: border-box;
+}
+
+.direita{
+    box-sizing: border-box;
+    float: left;
+    margin: 0 0 0 0 ;
+    text-align:left;
+    background-color: #EEEEEE;
+}
+
+.linha {
+    box-sizing: border-box;
+    width: 100%;
+    border: 0px ;
+    //margin: 2px;
+    height: 2em;
+    padding: 0px;
+}
+.linha p{
+    box-sizing: 1e;
+}
+
+.linha select {
+    height: 2em;
+   color:blue;    
+}
+
+input[type="text"]{
+    margin: 0px;
+    
+}
+
+
+.clear {
+    clear: both;
+}
+
+p{
+    border : 0px;
+    padding: 0px;
+    margin:  0px;
+}
+
+.formNewTask{
+    width: 100%;
+    max-height: 120%;
+    background-color: #EEEEEE;
+    padding: 0px;
+    margin: 0px;
+}
+
+#enviar{
+ 
+    color:blue;
+    text-align: left;
+    float:left;
+    margin-bottom: 25px;
+    margin-left: 30%;
+    
+}
+
+#loader{
+ 
+    color:blue;
+    text-align: left;
+    float:left;
+    margin-bottom: 25px;
+    margin-left: 30%;
+    
+}
+
+#descricao{
+ 
+ color:blue;
+ height: 10%;
+ width:100%;
+ 
+ 
+    
+}
+
+.linha_grande {
+    
+    width: 100%;
+    border: 0px ;
+    margin: 2px;
+    min-height: 15%;
+    
+}

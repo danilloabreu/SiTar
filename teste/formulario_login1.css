@@ -1,0 +1,61 @@
+/*
+    Author     : Dandan
+*/
+
+.logo{        
+    padding: 50px;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}   
+.conteudo{         
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    padding: 10px 0;
+} 
+.linha{
+    padding: 2px;
+    position: relative;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+h1{
+    color:blue;  
+}  
+        
+html,body{           
+    height: 100%;
+    padding: 0px;
+    margin: 0px;  
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:  #4d94ff;
+    color: black;
+    text-align: center   
+}
+.envelope{
+    min-height:100%;
+    position:relative;
+    width:100%;   
+}
+        
+.header{
+    position:absolute;
+    top:0;
+    width:100%;
+    background:  #4d94ff;
+    color: black;
+    text-align: center   
+}
+.img{
+    position: relative;
+    padding: 5px;
+}
+        

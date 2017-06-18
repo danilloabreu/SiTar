@@ -1,0 +1,43 @@
+main{
+ font-family: sans-serif;
+}
+
+.table_movimento_pendente{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.table_movimento pendente th,tr,td{
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 2px;
+    color:darkblue;
+    max-height: 2em;
+    width: auto;
+    max-width: 200px;
+    overflow-x: auto;
+    overflow-y: auto;
+    
+}
+
+h1{
+    text-align: center;
+    margin:10px;
+    font-size: 2em;
+    color: darkblue;
+    
+}
+.fa-forward{
+    color: #188018;
+    cursor: pointer;
+    height: 2em;
+}
+
+.fa-check-square{
+    color: #0089ff;
+    cursor: pointer;
+
+    
+}

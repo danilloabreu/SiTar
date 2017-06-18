@@ -1,0 +1,52 @@
+geral
+validação de dados server side
+colocação de trava de cookie
+
+pagina inicial
+link para tarefas direto na página inicial  
+
+
+inserir tarefa
+
+quando a tarefa não consegue ser inserida, o formulário perde os dados
+
+
+#######layout#######
+
+
+apagar/alterar tarefa
+tirar o * e escolher quais variáveis serão mostradas na tabela
+alterar tarefa ainda não está funcionando
+excluir ainda não está funcionando
+
+#######layout#######
+formatação da tabela está ruim
+
+
+ver tarefa abertas
+colocar botão solicitar finalização de tarefa
+#######layout#######
+
+
+rastrear tarefas solicitadas
+#######layout#######
+
+movimentos da tarefa
+
+a tabela contém muitos dados inuteis (ntarefa,finalizado)
+colocar botão fechar no fim da página
+#######layout#######
+formato das das está ano mes dia
+
+
+movimento pendente
+quando a tarefa é solicitada para ser finalizada, no primeiro clique não atualiza o conteúdo
+alertar tarefa encaminhada com sucesso 
+quando a descrição é muito grande a tabela ultrapassa as bordas
+
+
+
+encaminhar tarefa
+quando manda enviar, aparece uma mensagem de teste
+quando clicar o botão tem que fechar a página
+padronizar a mensagem do servidor
