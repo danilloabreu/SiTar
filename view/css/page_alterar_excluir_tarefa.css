@@ -1,0 +1,36 @@
+table{
+ margin:5px;   
+background-color: white;
+    border-radius: 20px;
+}
+
+i{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+td, tr{
+    border: solid #c7bbbb 1px;
+    vertical-align: middle;
+    background-color: white;
+}
+
+th{
+  border: solid black 1px; 
+    padding:5px;
+    background: white;
+    vertical-align: middle;
+border-radius: 2px;
+}
+
+.fa-trash-o{
+color:blue;    
+cursor: pointer;
+}
+
+.fa-pencil{
+color:red;
+cursor: pointer;
+}
+
+    

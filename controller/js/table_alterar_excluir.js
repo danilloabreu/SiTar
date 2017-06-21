@@ -13,7 +13,7 @@ $(document).ready(function(){
     });//fim da função focusin()
 
     //clique do botão alterar
-    $(".alterar").click(function(){
+    $(".alterar1").click(function(){
         var idTarefa=$(this).attr('id');//pega o id da tarefa a ser alterada
        
         
@@ -45,8 +45,40 @@ $(document).ready(function(){
                 return;//caso o usuário não confirme a solicitação a solicitaçaõ para
             }//fim do if-else
     });//fim da função excluir tarefa
+
+    //abrir tarefa em nova janela
+    $(document).on('click','.idTarefa',function(){        
+        //pega o valor do idTarefa
+        var a=$(this).html();
+        //abre uma nova janela com os movimentos da tarefa
+        window.open('/sitar/view/table/table_movimento.php?idtarefa='+a, 'Movimentos','STATUS=NO', 'TOOLBAR=NO', 'LOCATION=NO', 'DIRECTORIES=NO', 'RESISABLE=NO','SCROLLBARS=NO',' TOP=50',' LEFT=-30',' WIDTH=770', 'HEIGHT=400');   
+    });//fim da função abrir tarefa em nova janela
+
+    //excluir tarefa
+    $(document).on('click','.excluir1',function(){        
+        var l=($(this).attr('linha'));
+        $('tr[linha="'+l+'"]').fadeOut(function(){
+        $('tr[linha="'+l+'"]').remove();    
+        });//fim da função fadeOut()
+    });//fim da função excluir tarefa
+
+    //alterar tarefa
+    $(document).on('click','.alterar',function(){        
+        var l=($(this).attr('linha'));
+        //alert (l);
+        var idTarefa=$('.idTarefa[linha="'+l+'"]').html();
+        //alert(idTarefa);
+        
+        $.post("/sitar/controller/php/setar_alterar_tarefa.php", {alterar: true}, function (data,status){
+        window.location.replace('/sitar/view/form/form_nova_tarefa.php?idTarefa='+idTarefa);    
+        });
+        //alert($.cookie('alterar'))
+    });//fim da função alterar tarefa
+
+    
+    
+    
+    
 });//fim da função ready()
-
-
 	
 

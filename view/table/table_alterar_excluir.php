@@ -26,12 +26,13 @@ $query =$conexao->stmt_init();
             $query->bind_param('s',$emissor);           
             $resultado=$query->execute();
             
-            $tabela= "<table border=1 style=\"border-collapse: collapse\"><tr><td>Nº da Tarefa</td><td>Resumo</td><td>Responsável</td><td>Data de Abertura</td><td>Data de Finalização</td><td>Prioridade</td><td>Emissor</td><td>Parada com </td><td>Desde</td><td>Alterar/Excluir</td></tr>";
+            $tabela= "<table><tr><th>Nº da Tarefa</th><th>Resumo</th><th>Responsável</th><th>Data de Abertura</th><th>Data de Finalização</th><th>Prioridade</th><th>Emissor</th><th>Parada com </th><th>Desde</th><th>Ação</th></tr>";
             $query->bind_result($col1, $col2,$col3,$col4,$col5,$col6,$col7);
             
                 $agora=new DateTime();
                 $agora=$agora->format('d-m-Y H:i:s');
             
+                $aux=1;
             while ($query->fetch()) {    
                 
                 $dataabertura=new DateTime($col4);
@@ -41,9 +42,9 @@ $query =$conexao->stmt_init();
                 $datafinalizacao=$datafinalizacao->format('d-m-Y H:i:s');
                 
                      if(strtotime($agora)-strtotime($datafinalizacao)>=0){
-                       $tabela.="<tr class=\"atrasada\">";   
+                       $tabela.="<tr class=\"atrasada\" linha=".$aux.">";   
                         }else{
-                            $tabela.="<tr>";   
+                            $tabela.="<tr linha=".$aux." >";   
                             }          
                     
                     $disabled="";
@@ -52,10 +53,11 @@ $query =$conexao->stmt_init();
                     $disabled=" disabled";    
                     }
                             
-                    $tabela.="<td> <a href=\"#\" onclick=\"window.open('table/table_movimento.php?idtarefa=".$col1."', 'Movimentos', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=NO, TOP=50, LEFT=50, WIDTH=770, HEIGHT=400');\">".$col1."</a></td>"
+                    $tabela.="<td class=\"idTarefa\" linha=".$aux." >".$col1."</td>"
                     . "<td>".$col2."</td><td>".$col3."</td><td>".$dataabertura."</td><td>".$datafinalizacao."</td><td>".$col6."</td><td>".$col7."</td><td>".Tarefa::parada_com($col1)."</td><td>".Tarefa::parada_desde($col1)."</td>"
-                            . "<td><button class =\"alterar\"id=\"".$col1."\" ".$disabled.">Alterar</button><button class =\"excluir\" id=\"".$col1."\" ".$disabled.">Excluir</button></td>"
+                            . "<td><i linha=".$aux." class=\"fa fa-pencil alterar\" aria-hidden=\"true\"id=\"".$col1."\" ".$disabled."></i><i linha=".$aux." class=\"fa fa-trash-o excluir1\" aria-hidden=\"true\"id=\"".$col1."\" ".$disabled."></i></td>"
                     . "</tr>";
+                    $aux++;
                     }//fim do laço while
             
         

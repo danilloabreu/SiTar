@@ -4,6 +4,14 @@ $path = $_SERVER['DOCUMENT_ROOT'];
 require($path.'/sitar/model/usuario.php');
 require($path.'/sitar/model/br.com.sitar.Tarefa/br.com.sitar.Tarefa.php');
 require($path.'/sitar/model/br.com.sitar.Movimento/br.com.sitar.Movimento.php');
+
+//alteração de tarefa
+session_start();
+if(isset($_GET['idTarefa'])&&isset($_SESSION['alterar'])){
+    $idTarefa=$_GET['idTarefa'];
+}else{$idTarefa=null;
+    }
+$_SESSION['alterar']=null;
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +32,7 @@ require($path.'/sitar/model/br.com.sitar.Movimento/br.com.sitar.Movimento.php');
         <main>
         
       <div class="formNewTask">
-<h1 style="color:blue;text-align:center;"> Inserir Nova Tarefa </h1>
+          <h1 style="color:blue;text-align:center;"> Inserir Nova Tarefa <?php echo $idTarefa ; ?> </h1>
     <div class="esquerda">
         <div class="linha"><p>Responsável pela entrega da tarefa</p></div>
         <div class="linha"><p>Data limite de finalização da tarefa </p></div>
