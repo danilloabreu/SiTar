@@ -57,6 +57,20 @@ $(document).ready(function(){
     //excluir tarefa
     $(document).on('click','.excluir1',function(){        
         var l=($(this).attr('linha'));
+        var idTarefa=$('.idTarefa[linha="'+l+'"]').html();
+        var r = confirm("Excluir tarefa?");//solicitação a confirmação da exclusão da tarefa
+            if (r == true){
+                //transmite os dados via post para o controlador de exclusão da tarefa
+                $.post("/sitar/controller/php/excluir_tarefa.php",{
+                idtarefa: idTarefa
+                },
+                function(data, status){
+                    alert(data); //mensagem de confirmação da solicitação post
+                    x = true; //para atualizar a janela, pois a tarefa sairá do campo de visão do usuário
+            });//fim da função post excluir tarefa         
+            }else {
+                return;//caso o usuário não confirme a solicitação a solicitaçaõ para
+            }//fim do if-else
         $('tr[linha="'+l+'"]').fadeOut(function(){
         $('tr[linha="'+l+'"]').remove();    
         });//fim da função fadeOut()
